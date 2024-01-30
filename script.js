@@ -53,13 +53,13 @@ let next = document.querySelector('.next');
 let currQuesIndex = 0;
 let score = 0;
 
-function starQuiz(){
+function startQuiz(){
     currQuesIndex = 0;
     score = 0;
     next.innerHTML = "Next";
     showQuestion();
 }
-starQuiz()
+startQuiz()
 
 function showQuestion(){
     resetState();
@@ -93,11 +93,11 @@ function selectOption(e){
 
     // checking if user selected correct or incorrect option
     if(isCorrect){
-        selectedBtn.classList.add("correct");
-        score++;
+      selectedBtn.classList.add("correct");
+      score++;
     }
     else{
-        selectedBtn.classList.add("incorrect");
+      selectedBtn.classList.add("incorrect");
     }
 
     // disabling buttons after selecting one option
@@ -132,6 +132,6 @@ next.addEventListener("click", (e)=> {
         handleNextBtn();
     }
     else{
-        starQuiz();
+        startQuiz();
     }
 })
